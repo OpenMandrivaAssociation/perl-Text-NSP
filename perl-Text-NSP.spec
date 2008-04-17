@@ -47,7 +47,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc CHANGES README Docs/*
+%doc CHANGES README doc/*
 %{perl_vendorlib}/Text
 %{_mandir}/*/*
 %{_bindir}/*

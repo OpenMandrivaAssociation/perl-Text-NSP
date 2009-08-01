@@ -1,21 +1,21 @@
-%define module	Text-NSP
-%define name	perl-%{module}
-%define version 1.09
-%define release %mkrel 2
+%define upstream_name	 Text-NSP
+%define upstream_version 1.09
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	The Ngram Statistics Package 
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The module NSP.pm is a stub that doesn't have any real functionality. The real
@@ -29,7 +29,7 @@ These are not modules, and are run from the command line. All have extensive
 command line help and documentation.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,4 +51,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Text
 %{_mandir}/*/*
 %{_bindir}/*
-

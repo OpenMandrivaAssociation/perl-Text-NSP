@@ -1,5 +1,5 @@
 %define upstream_name	 Text-NSP
-%define upstream_version 1.17
+%define upstream_version 1.21
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}

@@ -1,15 +1,14 @@
 %define upstream_name	 Text-NSP
-%define upstream_version 1.23
-
+%define upstream_version 1.25
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.25
+Release:	1
 
 Summary:	The Ngram Statistics Package 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Text/Text-NSP-1.25.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -116,4 +115,5 @@ make test
 
 * Wed Nov 16 2005 Guillaume Rousse <guillomovitch@mandriva.org> 0.73-1mdk
 - first mdk release
+
 

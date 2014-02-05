@@ -1,4 +1,5 @@
 removed_sources:
   Text-NSP-1.23.tar.gz: 90d3116f875cb2772c065b3be4b6aa7736d4a199
-sources:
   Text-NSP-1.25.tar.gz: fdc791f740647d3dcda701278d69a15af740fbd0
+sources:
+  Text-NSP-1.27.tar.gz: dbc6d36ecb6d22ee267dc09386c9114d4c5d6c51

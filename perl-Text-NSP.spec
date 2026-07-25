@@ -1,14 +1,14 @@
 %define upstream_name	 Text-NSP
-%define upstream_version 1.27
+%define upstream_version 1.31
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	The Ngram Statistics Package 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Text/Text-NSP-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Text-NSP
+Source0:	https://cpan.metacpan.org/authors/id/T/TP/TPEDERSE/Text-NSP-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel

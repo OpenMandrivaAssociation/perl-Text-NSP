@@ -1,14 +1,13 @@
 %define upstream_name	 Text-NSP
-%define upstream_version 1.31
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.31
+Release:	2
 
 Summary:	The Ngram Statistics Package 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Text-NSP
-Source0:	https://cpan.metacpan.org/authors/id/T/TP/TPEDERSE/Text-NSP-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/T/TP/TPEDERSE/Text-NSP-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +25,7 @@ These are not modules, and are run from the command line. All have extensive
 command line help and documentation.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -71,9 +70,7 @@ make test
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 1.90.0-1mdv2010.0
 + Revision: 405713
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.09-2mdv2009.0
+- rebuild using %1.31 Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.09-2mdv2009.0
 + Revision: 268795
 - rebuild early 2009.0 package (before pixel changes)
 
